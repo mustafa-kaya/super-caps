@@ -4,7 +4,7 @@ title: SuperCaps
 rules: 
 
   ################################################################
-  # Capslock to Esc / Super ( ⌘⌥⇧⌃ )
+  # Capslock to Super ( ⌘⌥⇧⌃ )
   ################################################################
   - description: CapsLock to Super
     manipulators: 
@@ -13,7 +13,6 @@ rules:
         type: basic
         from: { key_code: caps_lock, modifiers: { optional: [ any ] } }
         to: [ { key_code: right_shift, modifiers: [ right_command, right_control, right_option ] } ]
-        to_if_alone: [ { key_code: escape } ]
 
       - description: 'super + escape = caps_lock switch'
         type: basic
@@ -21,14 +20,11 @@ rules:
         to: [ { key_code: caps_lock } ]
 
   ################################################################
-  # Super Navigation
+  # Caret Move --> super + { hjkl }
   ################################################################
-  - description: Super Navigation
+  - description: Caret Move
     manipulators: 
 
-    #==========================================================#
-    # Caret Move --> super + { hjkl }
-    #==========================================================#
     - description: 'super + h = left_arrow'
       type: basic
       from: { key_code: h, modifiers: { mandatory: [ right_shift, right_command, right_control, right_option ] } }
@@ -48,27 +44,4 @@ rules:
       type: basic
       from: { key_code: l, modifiers: { mandatory: [ right_shift, right_command, right_control, right_option ] } }
       to: [ { key_code: right_arrow } ]
-
-    #==========================================================#
-    # Text Selection --> super + CMD + { hjkl }
-    #==========================================================#
-    - description: 'super + left_command + h = left_arrow + left_shift'
-      type: basic
-      from: { key_code: h, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
-      to: [ { key_code: left_arrow, modifiers: [ left_shift ] } ]
-
-    - description: 'super + left_command + j = down_arrow + left_shift'
-      type: basic
-      from: { key_code: j, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
-      to: [ { key_code: down_arrow, modifiers: [ left_shift ] } ]
-
-    - description: 'super + left_command + k = up_arrow + left_shift'
-      type: basic
-      from: { key_code: k, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
-      to: [ { key_code: up_arrow, modifiers: [ left_shift ] } ]
-
-    - description: 'super + left_command + l = right_arrow + left_shift'
-      type: basic
-      from: { key_code: l, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
-      to: [ { key_code: right_arrow, modifiers: [ left_shift ] } ]
 ...

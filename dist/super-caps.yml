@@ -25,6 +25,9 @@ rules:
   - description: Super Navigation
     manipulators: 
 
+    #==========================================================#
+    # Arrow Keys
+    #==========================================================#
     - description: 'left'
       type: basic
       from: { key_code: h, modifiers: { mandatory: [ right_shift, right_command, right_control, right_option ] } }
@@ -43,7 +46,66 @@ rules:
     - description: 'right'
       type: basic
       from: { key_code: l, modifiers: { mandatory: [ right_shift, right_command, right_control, right_option ] } }
-      to: [ { key_code: right_arrow } ]  
+      to: [ { key_code: right_arrow } ]
+
+    #==========================================================#
+    # Selection - COMMAND
+    #==========================================================#
+    - description: 'left selection'
+      type: basic
+      from: { key_code: h, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: left_arrow , modifiers: [ left_shift ] } ]
+    
+    - description: 'down selection'
+      type: basic
+      from: { key_code: j, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: down_arrow , modifiers: [ left_shift ] } ]
+
+    - description: 'up selection'
+      type: basic
+      from: { key_code: k, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: up_arrow , modifiers: [ left_shift ] } ]
+
+    - description: 'right selection'
+      type: basic
+      from: { key_code: l, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: right_arrow , modifiers: [ left_shift ] } ]
+
+    #==========================================================#
+    # Word Selection - OPTION
+    #==========================================================#
+    - description: 'prev word selection'
+      type: basic
+      from: { key_code: h, modifiers: { mandatory: [ left_option, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: left_arrow , modifiers: [ left_option, left_shift ] } ]
+
+    - description: 'next word selection'
+      type: basic
+      from: { key_code: l, modifiers: { mandatory: [ left_option, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: right_arrow , modifiers: [ left_option, left_shift ] } ]
+
+    #==========================================================#
+    # Desktop Management - CONTROL
+    #==========================================================#
+    - description: 'prev desktop'
+      type: basic
+      from: { key_code: h, modifiers: { mandatory: [ left_control, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: left_arrow , modifiers: [ left_control ] } ]
+    
+    - description: 'focus app'
+      type: basic
+      from: { key_code: j, modifiers: { mandatory: [ left_control, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: down_arrow , modifiers: [ left_control ] } ]
+
+    - description: 'expose all'
+      type: basic
+      from: { key_code: k, modifiers: { mandatory: [ left_control, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: up_arrow , modifiers: [ left_control ] } ]
+
+    - description: 'next desktop'
+      type: basic
+      from: { key_code: l, modifiers: { mandatory: [ left_control, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: right_arrow , modifiers: [ left_control ] } ]  
   
   ################################################################
   # Window Management - REQUIREMENT: Magnet App
@@ -95,4 +157,56 @@ rules:
       type: basic
       from: { key_code: return_or_enter, modifiers: { mandatory: [ fn, right_shift, right_command, right_control, right_option ] } }
       to: [ { key_code: return_or_enter, modifiers: [ left_control, left_option, left_command ] } ]
+
+  ################################################################
+  # Super Deletion
+  ################################################################
+  - description: Super Deletion
+    manipulators: 
+
+    #==========================================================#
+    # Delete Before
+    #==========================================================#
+    - description: 'delete a char before'
+      type: basic
+      from: { key_code: m, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_or_backspace } ]
+
+    - description: 'delete a word before'
+      type: basic
+      from: { key_code: n, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_or_backspace, modifiers: [ left_option ] } ]
+
+    - description: 'delete line before'
+      type: basic
+      from: { key_code: m, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: left_arrow, modifiers: [ left_shift,left_command ] } , { key_code: delete_or_backspace } ]
+
+    - description: 'delete whole line'
+      type: basic
+      from: { key_code: n, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_or_backspace, modifiers: [ left_command ] } ]
+
+    #==========================================================#
+    # Delete After
+    #==========================================================#
+    - description: 'delete a char after'
+      type: basic
+      from: { key_code: comma, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_forward } ]
+
+    - description: 'delete a word after'
+      type: basic
+      from: { key_code: period, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_forward, modifiers: [ left_option ] } ]
+
+    - description: 'delete line after'
+      type: basic
+      from: { key_code: comma, modifiers: { mandatory: [ left_command,  right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: right_arrow, modifiers: [ left_shift,left_command ] } , { key_code: delete_or_backspace } ]
+
+    - description: 'delete whole line'
+      type: basic
+      from: { key_code: period, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_forward, modifiers: [ left_command ] } ]
 ...

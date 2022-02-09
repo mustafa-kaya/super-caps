@@ -6,6 +6,9 @@
   - description: Super Navigation
     manipulators: 
 
+    #==========================================================#
+    # Arrow Keys
+    #==========================================================#
     - description: 'left'
       type: basic
       from: { key_code: h, modifiers: { mandatory: [ right_shift, right_command, right_control, right_option ] } }
@@ -25,3 +28,62 @@
       type: basic
       from: { key_code: l, modifiers: { mandatory: [ right_shift, right_command, right_control, right_option ] } }
       to: [ { key_code: right_arrow } ]
+
+    #==========================================================#
+    # Selection - COMMAND
+    #==========================================================#
+    - description: 'left selection'
+      type: basic
+      from: { key_code: h, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: left_arrow , modifiers: [ left_shift ] } ]
+    
+    - description: 'down selection'
+      type: basic
+      from: { key_code: j, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: down_arrow , modifiers: [ left_shift ] } ]
+
+    - description: 'up selection'
+      type: basic
+      from: { key_code: k, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: up_arrow , modifiers: [ left_shift ] } ]
+
+    - description: 'right selection'
+      type: basic
+      from: { key_code: l, modifiers: { mandatory: [ left_command, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: right_arrow , modifiers: [ left_shift ] } ]
+
+    #==========================================================#
+    # Word Selection - OPTION
+    #==========================================================#
+    - description: 'prev word selection'
+      type: basic
+      from: { key_code: h, modifiers: { mandatory: [ left_option, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: left_arrow , modifiers: [ left_option, left_shift ] } ]
+
+    - description: 'next word selection'
+      type: basic
+      from: { key_code: l, modifiers: { mandatory: [ left_option, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: right_arrow , modifiers: [ left_option, left_shift ] } ]
+
+    #==========================================================#
+    # Desktop Management - CONTROL
+    #==========================================================#
+    - description: 'prev desktop'
+      type: basic
+      from: { key_code: h, modifiers: { mandatory: [ left_control, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: left_arrow , modifiers: [ left_control ] } ]
+    
+    - description: 'focus app'
+      type: basic
+      from: { key_code: j, modifiers: { mandatory: [ left_control, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: down_arrow , modifiers: [ left_control ] } ]
+
+    - description: 'expose all'
+      type: basic
+      from: { key_code: k, modifiers: { mandatory: [ left_control, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: up_arrow , modifiers: [ left_control ] } ]
+
+    - description: 'next desktop'
+      type: basic
+      from: { key_code: l, modifiers: { mandatory: [ left_control, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: right_arrow , modifiers: [ left_control ] } ]

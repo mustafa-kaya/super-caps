@@ -1,0 +1,53 @@
+
+
+  ################################################################
+  # Super Deletion
+  ################################################################
+  - description: Super Deletion
+    manipulators:
+
+    #==========================================================#
+    # Delete Before
+    #==========================================================#
+    - description: 'delete a char before'
+      type: basic
+      from: { key_code: m, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_or_backspace } ]
+
+    - description: 'delete a word before'
+      type: basic
+      from: { key_code: n, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_or_backspace, modifiers: [ left_option ] } ]
+
+    - description: 'delete line before'
+      type: basic
+      from: { key_code: m, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: left_arrow, modifiers: [ left_shift,left_command ] } , { key_code: delete_or_backspace } ]
+
+    - description: 'delete whole line'
+      type: basic
+      from: { key_code: n, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_or_backspace, modifiers: [ left_command ] } ]
+
+    #==========================================================#
+    # Delete After
+    #==========================================================#
+    - description: 'delete a char after'
+      type: basic
+      from: { key_code: comma, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_forward } ]
+
+    - description: 'delete a word after'
+      type: basic
+      from: { key_code: period, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_forward, modifiers: [ left_option ] } ]
+
+    - description: 'delete line after'
+      type: basic
+      from: { key_code: comma, modifiers: { mandatory: [ left_command,  right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: right_arrow, modifiers: [ left_shift,left_command ] } , { key_code: delete_or_backspace } ]
+
+    - description: 'delete whole line'
+      type: basic
+      from: { key_code: period, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
+      to: [ { key_code: delete_forward, modifiers: [ left_command ] } ]

@@ -24,7 +24,7 @@
       from: { key_code: m, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
       to: [ { key_code: left_arrow, modifiers: [ left_shift,left_command ] } , { key_code: delete_or_backspace } ]
 
-    - description: 'delete whole line'
+    - description: 'delete whole line before'
       type: basic
       from: { key_code: n, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
       to: [ { key_code: delete_or_backspace, modifiers: [ left_command ] } ]
@@ -47,7 +47,7 @@
       from: { key_code: comma, modifiers: { mandatory: [ left_command,  right_command, right_control, right_shift, right_option ] } }
       to: [ { key_code: right_arrow, modifiers: [ left_shift,left_command ] } , { key_code: delete_or_backspace } ]
 
-    - description: 'delete whole line'
+    - description: 'delete whole line after'
       type: basic
       from: { key_code: period, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
       to: [ { key_code: delete_forward, modifiers: [ left_command ] } ]

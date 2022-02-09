@@ -1,0 +1,52 @@
+  
+  
+  ################################################################
+  # Window Management - REQUIREMENT: Magnet App
+  ################################################################
+  - description: Window Management
+    manipulators:
+
+    - description: 'left'
+      type: basic
+      from: { key_code: left_arrow, modifiers: { mandatory: [ fn, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: left_arrow, modifiers: [ left_control, left_option, left_command ] } ]
+
+    - description: 'right'
+      type: basic
+      from: { key_code: right_arrow, modifiers: { mandatory: [ fn, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: right_arrow, modifiers: [ left_control, left_option, left_command ] } ]
+
+    - description: 'up'
+      type: basic
+      from: { key_code: up_arrow, modifiers: { mandatory: [ fn, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: up_arrow, modifiers: [ left_control, left_option, left_command ] } ]
+
+    - description: 'down'
+      type: basic
+      from: { key_code: down_arrow, modifiers: { mandatory: [ fn, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: down_arrow, modifiers: [ left_control, left_option, left_command ] } ]
+
+    - description: 'top left'
+      type: basic
+      from: { key_code: u, modifiers: { mandatory: [ fn, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: u, modifiers: [ left_control, left_option, left_command ] } ]
+
+    - description: 'top right'
+      type: basic
+      from: { key_code: i, modifiers: { mandatory: [ fn, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: i, modifiers: [ left_control, left_option, left_command ] } ]
+    
+    - description: 'bottom left'
+      type: basic
+      from: { key_code: j, modifiers: { mandatory: [ fn, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: j, modifiers: [ left_control, left_option, left_command ] } ]
+
+    - description: 'bottom right'
+      type: basic
+      from: { key_code: k, modifiers: { mandatory: [ fn, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: k, modifiers: [ left_control, left_option, left_command ] } ]
+
+    - description: 'maximize'
+      type: basic
+      from: { key_code: return_or_enter, modifiers: { mandatory: [ fn, right_shift, right_command, right_control, right_option ] } }
+      to: [ { key_code: return_or_enter, modifiers: [ left_control, left_option, left_command ] } ]

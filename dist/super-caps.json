@@ -5,7 +5,7 @@
       "description": "CapsLock to Super",
       "manipulators": [
         {
-          "description": "capslock = esc(click) | super(hold)",
+          "description": "capslock -> super",
           "type": "basic",
           "from": {
             "key_code": "caps_lock",
@@ -27,7 +27,7 @@
           ]
         },
         {
-          "description": "super + escape = caps_lock switch",
+          "description": "capslock switch",
           "type": "basic",
           "from": {
             "key_code": "escape",
@@ -52,10 +52,10 @@
       ]
     },
     {
-      "description": "Caret Move",
+      "description": "Super Navigation",
       "manipulators": [
         {
-          "description": "super + h = left_arrow",
+          "description": "left",
           "type": "basic",
           "from": {
             "key_code": "h",
@@ -75,7 +75,7 @@
           ]
         },
         {
-          "description": "super + j = down_arrow",
+          "description": "down",
           "type": "basic",
           "from": {
             "key_code": "j",
@@ -95,7 +95,7 @@
           ]
         },
         {
-          "description": "super + k = up_arrow",
+          "description": "up",
           "type": "basic",
           "from": {
             "key_code": "k",
@@ -115,7 +115,7 @@
           ]
         },
         {
-          "description": "super + l = right_arrow",
+          "description": "right",
           "type": "basic",
           "from": {
             "key_code": "l",
@@ -137,16 +137,16 @@
       ]
     },
     {
-      "description": "Magnet Window Manager",
+      "description": "Window Management",
       "manipulators": [
         {
-          "description": "Left",
+          "description": "left",
           "type": "basic",
           "from": {
             "key_code": "left_arrow",
             "modifiers": {
               "mandatory": [
-                "left_command",
+                "fn",
                 "right_shift",
                 "right_command",
                 "right_control",
@@ -166,13 +166,13 @@
           ]
         },
         {
-          "description": "Right",
+          "description": "right",
           "type": "basic",
           "from": {
             "key_code": "right_arrow",
             "modifiers": {
               "mandatory": [
-                "left_command",
+                "fn",
                 "right_shift",
                 "right_command",
                 "right_control",
@@ -192,13 +192,13 @@
           ]
         },
         {
-          "description": "Up",
+          "description": "up",
           "type": "basic",
           "from": {
             "key_code": "up_arrow",
             "modifiers": {
               "mandatory": [
-                "left_command",
+                "fn",
                 "right_shift",
                 "right_command",
                 "right_control",
@@ -218,13 +218,13 @@
           ]
         },
         {
-          "description": "Down",
+          "description": "down",
           "type": "basic",
           "from": {
             "key_code": "down_arrow",
             "modifiers": {
               "mandatory": [
-                "left_command",
+                "fn",
                 "right_shift",
                 "right_command",
                 "right_control",
@@ -244,13 +244,13 @@
           ]
         },
         {
-          "description": "Top Left",
+          "description": "top left",
           "type": "basic",
           "from": {
             "key_code": "u",
             "modifiers": {
               "mandatory": [
-                "left_command",
+                "fn",
                 "right_shift",
                 "right_command",
                 "right_control",
@@ -270,13 +270,13 @@
           ]
         },
         {
-          "description": "Top Right",
+          "description": "top right",
           "type": "basic",
           "from": {
             "key_code": "i",
             "modifiers": {
               "mandatory": [
-                "left_command",
+                "fn",
                 "right_shift",
                 "right_command",
                 "right_control",
@@ -296,13 +296,13 @@
           ]
         },
         {
-          "description": "Bottom Left",
+          "description": "bottom left",
           "type": "basic",
           "from": {
             "key_code": "j",
             "modifiers": {
               "mandatory": [
-                "left_command",
+                "fn",
                 "right_shift",
                 "right_command",
                 "right_control",
@@ -322,13 +322,13 @@
           ]
         },
         {
-          "description": "Bottom Right",
+          "description": "bottom right",
           "type": "basic",
           "from": {
             "key_code": "k",
             "modifiers": {
               "mandatory": [
-                "left_command",
+                "fn",
                 "right_shift",
                 "right_command",
                 "right_control",
@@ -348,13 +348,13 @@
           ]
         },
         {
-          "description": "Maximize",
+          "description": "maximize",
           "type": "basic",
           "from": {
             "key_code": "return_or_enter",
             "modifiers": {
               "mandatory": [
-                "left_command",
+                "fn",
                 "right_shift",
                 "right_command",
                 "right_control",

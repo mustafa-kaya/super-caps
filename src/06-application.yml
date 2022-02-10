@@ -1,0 +1,37 @@
+
+
+  ################################################################
+  # Super Application
+  ################################################################
+  - description: Super Application
+    manipulators:
+
+    - description: 'Finder'
+      type: basic
+      from: { key_code: f, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { shell_command: open -a finder } ]
+
+    - description: 'Visual Studio Code'
+      type: basic
+      from: { key_code: v, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { shell_command: open -a 'Visual Studio Code' } ]
+
+    - description: 'Google Chrome'
+      type: basic
+      from: { key_code: c, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { shell_command: open -a 'Google Chrome' } ]
+
+    - description: 'iTerm2'
+      type: basic
+      from: { key_code: t, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { shell_command: open -a 'iTerm' } ]
+
+    - description: 'Craft'
+      type: basic
+      from: { key_code: c, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
+      to: [ { shell_command: open -a Craft } ]
+
+    - description: 'Todoist'
+      type: basic
+      from: { key_code: t, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
+      to: [ { shell_command: open -a Todoist } ]

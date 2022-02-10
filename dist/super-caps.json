@@ -692,7 +692,7 @@
           ]
         },
         {
-          "description": "delete whole line",
+          "description": "delete whole line before",
           "type": "basic",
           "from": {
             "key_code": "n",
@@ -787,7 +787,7 @@
           ]
         },
         {
-          "description": "delete whole line",
+          "description": "delete whole line after",
           "type": "basic",
           "from": {
             "key_code": "period",
@@ -807,6 +807,100 @@
               "modifiers": [
                 "left_command"
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Super Shifter",
+      "manipulators": [
+        {
+          "description": "[ => (",
+          "type": "basic",
+          "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "9",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "] => )",
+          "type": "basic",
+          "from": {
+            "key_code": "close_bracket",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "0",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "; => !",
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "1",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "quote => =",
+          "type": "basic",
+          "from": {
+            "key_code": "quote",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "equal_sign"
             }
           ]
         }

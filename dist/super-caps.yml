@@ -272,6 +272,11 @@ rules:
       from: { key_code: t, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
       to: [ { shell_command: open -a 'iTerm' } ]
 
+    - description: 'Min Browser'
+      type: basic
+      from: { key_code: s, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ] } }
+      to: [ { shell_command: open -a Min } ]
+
     - description: 'Craft'
       type: basic
       from: { key_code: c, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
@@ -282,10 +287,7 @@ rules:
       from: { key_code: t, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
       to: [ { shell_command: open -a Todoist } ]
 
-    - description: 'Min Browser'
-      type: basic
-      from: { key_code: s, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ] } }
-      to: [ { shell_command: open -a Min } ]
+    
 
   ################################################################
   # Super Clipboard

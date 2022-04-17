@@ -1,0 +1,12 @@
+
+
+  ################################################################
+  # Language Switcher
+  ################################################################
+  - description: Language Switcher
+    manipulators:
+
+    - description: 'language switch'
+      type: basic
+      from: { key_code: left_shift, modifiers: { mandatory: [ left_option ] } }
+      to: [ { key_code: spacebar , modifiers: [ left_control ] } ]
